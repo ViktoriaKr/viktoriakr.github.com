@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> To Do List </title>
+  <style>
+        .list{
+              width: 100%;
+              height: 100%;
+              padding-bottom: 500px;
+              background-image: url('wood.png');
+              box-shadow: inset -11px -10px 115px -13px rgba(0,0,0,0.75);
+              position: relative;
+             }
+       .title{
+              font-size: 70px;
+              font-weight: 700;
+              font-family: Comic Sans, Comic Sans MS, cursive;
+              color: #008080;
+              text-shadow: -11px 10px 10px rgba(162, 164, 157, 0.75);
+              margin-left: 30%;
+             }
+          div{
+              width: 100%;
+              height: 100px;
+             }
+         .top{
+              margin-top: 20px;
+              margin-left: 20px;
+             }
+       #input,
+       #output{
+              width: 800px;
+              height: 80px;
+              outline: none;
+              font-size: 20px;
+              font-family: Arial;
+              padding: 10px;
+              box-shadow: -1px 10px 20px -2px rgba(0,0,0,0.58);
+              border: 5px dotted #F5DEB3;
+             }
+         .add,
+        .show{
+              width: 55px;
+              height: 55px;
+              border-radius: 50%;
+              margin-bottom: -15px;
+              margin-left: 7px;
+             }
+       .addto{
+              margin-left: 20px;
+              margin-top: 25px;
+             }
+        .ready #output{
+              text-decoration: line-through;
+              background-color: lightyellow;
+              color: grey;
+             }
+      #output{
+              background-color: white;
+              float: left;
+             }
+        .done,
+      .delete{
+              width: 55px;
+              height: 55px;
+              border-radius: 50%;
+              margin-top: 25px;
+              margin-left: 12px;
+             }
+    img:hover{
+              box-shadow: -5px 9px 71px 12px rgba(0,0,0,0.58);
+             }
+  </style>
+</head>
+<body>
+  <div class="list">
+    <span class="title"> To Do List </span>
+    <div class="top">
+         <input  id = "input" type="text">
+         <img class = "add" src="pencil.png">
+         <img class = "show" src="view.png">
+    </div>
+  </div>
+  <script src="jquery-1.11.3.min.js"> </script>
+
+  <script>
+    $(function () {
+         if(localStorage.getItem('notes')) {
+             $('.list').html(localStorage.getItem('notes'));
+         };
+
+        $('.add').click(function(){
+            var inputText = $('#input').val();
+            if(inputText.length > 0){
+                $('.list').append('<div class = "addto"> <div id = "output"> '+inputText+' </div> <img class = "done" src="done.png"> <img class = "delete" src="delete.png"></div>');
+                $('#input').val(''); 
+            };
+            saveList();
+        }); 
+
+
+
+        $('.show').click(function(){
+            if($('.addto.ready').css('display') === 'block'){
+              $('.addto.ready').hide();
+            }else{
+              $('.addto.ready').show();
+            };
+        });
+
+
+        $('.list').on('click','.done', function(){
+            $(this).parent().toggleClass('ready'); 
+            saveList();
+        });
+        
+
+        $('.list').on('click','.delete', function(){
+            $(this).parent().remove();
+            saveList();
+        }); 
+    });
+
+    function saveList(){
+        var saved = $('.list').html();
+        localStorage.setItem('notes', saved);
+    }; 
+
+  </script>
+  
+</body>
+</html>

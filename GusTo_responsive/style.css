@@ -1,0 +1,352 @@
+.line {
+  border-bottom: 1px solid #eaeaea;
+}
+.style_text {
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: HelveticaNeue;
+}
+@media screen and (max-width: 768px) {
+  #container {
+    width: 100% !important;
+    transition: all 0.3s ease;
+  }
+  img {
+    max-width: 100%;
+    text-align: center;
+  }
+  header {
+    width: 100%;
+    height: auto;
+  }
+  header #logo {
+    max-width: 30%;
+    display: inline;
+  }
+  header #logo img {
+    max-width: 20%;
+  }
+  header h3 {
+    display: block;
+    margin-left: 4%;
+  }
+  .firstItem {
+    width: 100% !important;
+    float: none;
+    margin-bottom: 5%;
+  }
+  .secondItem {
+    width: 100% !important;
+    float: none;
+  }
+  .adSpace {
+    width: 100% !important;
+    margin-bottom: 5%;
+  }
+  .adSpace:last-child,
+  .adSpace:nth-child(2n) {
+    display: inline;
+    margin-left: 0 !important;
+  }
+  .connectPart {
+    text-align: center;
+  }
+  .middlePart p {
+    width: 100% !important;
+    display: block;
+  }
+  .middlePart .links {
+    width: 100% !important;
+    display: block;
+  }
+  .bottomPar {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header_container header,
+  .main_container main,
+  .connectPart,
+  .darkGreyPart {
+    width: 100% !important;
+    transition: all 0.9s ease;
+  }
+}
+#container,
+header,
+main,
+article,
+footer,
+body,
+.main_container,
+.connectPart,
+.bottomPart,
+.largerItem,
+.smallItem,
+.adsSpace,
+article,
+.footer_container,
+.middlePart,
+.darkGreyPart,
+.bottomPart {
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+}
+#container {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  background-color: #f1f1f1;
+}
+.header_container {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  background-color: #e1e1e1;
+}
+.header_container header {
+  width: 60%;
+  height: auto;
+  background-color: #53545e;
+}
+#logo {
+  width: 28.7%;
+  height: auto;
+  display: inline-block;
+  margin-left: 4%;
+  margin-top: 3%;
+  font-family: OpenSans;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 33px;
+  color: white;
+  text-transform: uppercase;
+}
+#logo span {
+  color: #a6a7b0;
+}
+h3 {
+  font-family: OpenSans;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 18px;
+  color: #f1f1f1;
+  display: inline-block;
+  margin-left: 25%;
+}
+h3 a {
+  color: #a6a7b0;
+  text-decoration: none;
+}
+h3 a:hover {
+  color: #f1f1f1;
+}
+.main_container {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+.main_container main {
+  width: 60%;
+  height: auto;
+  background-color: white;
+  padding-bottom: 5%;
+}
+.largerItem {
+  width: 90%;
+  height: auto;
+  padding-bottom: 5%;
+}
+.largerItem img {
+  width: 100%;
+  height: auto;
+}
+h1 {
+  color: #53545e;
+  font-family: OpenSans;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+p {
+  color: #bfc0c3;
+  font-family: HelveticaNeue;
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 20px;
+}
+button {
+  width: 6.835em;
+  height: 36px;
+  outline: none;
+  background-color: #53545e;
+}
+button a {
+  text-decoration: none;
+  color: white;
+  font-family: OpenSans;
+  font-size: 0.875em;
+  font-weight: 700;
+  line-height: 24px;
+  display: block;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #9fa0ab;
+}
+.smallItem {
+  width: 90%;
+  height: auto;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #eaeaea;
+}
+.smallItem .firstItem {
+  width: 47.2%;
+  float: left;
+}
+.smallItem .firstItem img {
+  max-width: 100%;
+}
+.smallItem .secondItem {
+  width: 47.222%;
+  float: right;
+}
+.smallItem .secondItem img {
+  max-width: 100%;
+}
+.smallItem:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.adsSpace {
+  width: 90%;
+  height: auto;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #eaeaea;
+}
+.adsSpace .adSpace {
+  display: inline-block;
+  text-align: center;
+}
+.adsSpace .adSpace:last-child,
+.adsSpace .adSpace:nth-child(2n) {
+  margin-left: 4%;
+}
+article {
+  width: 90%;
+  height: auto;
+  margin-top: 5%;
+}
+article .titleTwo {
+  margin-top: 12%;
+}
+.footer_container {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  background-color: #e1e1e1;
+  padding-bottom: 5%;
+}
+.connectPart {
+  width: 60%;
+  height: auto;
+  padding: 2% 0;
+  background-color: #f1f1f1;
+}
+.connectPart span {
+  color: #53545e;
+  font-family: OpenSans;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.connectPart div {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  display: inline-block;
+  line-height: 34px;
+  text-align: center;
+}
+.connectPart div a {
+  display: block;
+  border-radius: 50%;
+}
+.connectPart div a:hover {
+  background-color: #fbfbfb;
+}
+.middlePart {
+  width: 90%;
+  height: auto;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #eaeaea;
+}
+.middlePart p {
+  width: 64.074%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5%;
+}
+.middlePart .links {
+  width: 22.222%;
+  height: auto;
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+.middlePart .links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: HelveticaNeue;
+}
+.middlePart .links a:hover {
+  color: #aeaeae;
+}
+.darkGreyPart {
+  width: 60%;
+  height: auto;
+  background-color: #53545e;
+}
+.bottomPart {
+  width: 90%;
+}
+.bottomPart h5 {
+  color: #a6a7b0;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: HelveticaNeue;
+}
+.bottomPart h5 span {
+  color: white;
+}
+.bottomPart .view {
+  color: #a6a7b0;
+  display: inline-block;
+  margin-left: 35%;
+}
+.bottomPart .view a {
+  color: #a6a7b0;
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: HelveticaNeue;
+}
+.bottomPart .view a:hover {
+  color: white;
+}

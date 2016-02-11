@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Slider </title>
+	<style>
+	               body{
+		                background-color: lightyellow;
+	                   }
+	               .gal{
+		                width: 500px;
+		                height: 400px;
+		                margin: 25px auto;
+		                border: 10px double brown;
+		                position: relative;
+		                overflow: hidden;
+	                   }
+	        .gal .inner{
+		                width: 50000px;
+		                font-size: 0;
+	                   }
+	           .gal img{
+		                width: 500px;
+		                height: 400px;
+		                vertical-align: middle;
+	                   }
+	        .gal button{
+		                position: absolute;
+		                border-radius: 50%;
+		                top: 50%;
+		                margin-top: -10px;
+		                background-color: gray;
+		                border: 1px solid darkorange;
+		                outline: none;
+	                   }
+	         .gal .prev{
+		                left: 10px;
+	                   }
+	         .gal .next{
+		                right: 10px;
+	                   }
+	         .gal .dots{
+		                height: 15px;
+		                width: 100%;
+		                position: absolute;
+		                left: 0;
+		                bottom: 7px;
+		                text-align: center;
+	                   }
+	       .gal .dots i{	
+	                    width: 15px;	                
+		                height: 15px;		                
+		                border-radius: 50%;
+		                background-color: darkorange;
+		                margin: 0 3px;
+		                cursor: pointer;
+		                display: inline-block;
+	                   }
+	.gal .dots i.active{
+		                background-color: gray;
+	                   }
+	</style>
+</head>
+<body>
+
+<div class="gal">
+	<div class="inner">
+		<img src="img/6.png">
+		<img src="img/1.png">
+		<img src="img/2.png">
+		<img src="img/3.png">
+		<img src="img/4.png">
+		<img src="img/5.png">
+	</div>
+	<button class="prev"><</button>
+	<button class="next">></button>
+	<div class="dots">
+	</div>
+</div>
+
+	<script src="jquery-1.11.3.min.js"> </script>
+
+	<script>
+	$(function () {
+		var $gal = $('.gal .inner');
+		var galWidth = $('.gal').width();
+		var imgCount = $('.gal img').length;
+
+		function goToImage(num){
+			q = true;
+			$gal.animate({
+				'margin-left': -1*num*galWidth
+			}, 600, function (){
+				q = false;
+				$('.dots .active').removeClass('active');
+				$('.gal .dots i:nth-child('+(num+1)+')').addClass('active');//к num прибавляем 1 потому что nth-child работает не с нуля, а с единицы
+			});
+		}
+
+		$gal.width(imgCount*galWidth);//устанавливаем нужную ширину иннера
+
+		var numberOfCurrentImage = 0;
+		var q = false;
+
+		//добавляем точки по количеству картинок
+		for (var i = 0; i < imgCount; i++) {
+			$('.dots').append('<i data-num="'+i+'"></i>');
+		};
+
+		if(location.hash){//если есть хэш, то номером текущей картинки устанавливаем его
+			numberOfCurrentImage = parseInt( location.hash.substr(1) );
+		}
+		goToImage(numberOfCurrentImage);
+
+	
+		$('.gal .next').click(function(){
+			if(q) return;
+			numberOfCurrentImage++;
+			if(numberOfCurrentImage === imgCount){
+				goToImage(0);
+				numberOfCurrentImage = 0;
+			} else {
+				goToImage( numberOfCurrentImage );
+			}
+		});
+
+		$('.gal .prev').click(function(){
+			if(q) return;
+			numberOfCurrentImage--;
+			if(numberOfCurrentImage < 0){
+				goToImage(imgCount-1);
+				numberOfCurrentImage = imgCount - 1;
+			} else {
+				goToImage( numberOfCurrentImage );
+			}
+		});
+		
+		$('.gal .dots i').click(function(){
+			var num = $(this).data('num');
+			location.hash = num;
+			goToImage(num);
+		})
+	});
+	</script>
+</body>
+</html>

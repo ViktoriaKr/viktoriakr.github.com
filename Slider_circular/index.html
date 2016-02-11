@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Slider </title>
+	    <style>
+	                body{
+		                 background-image: url("image/wood.png");
+	                    }
+	                .gal{
+		                 width: 600px;
+		                 margin: 40px auto;
+		                 overflow: hidden;
+		                 position: relative;
+		                 border: 3px solid lightgrey;
+	                    }
+	         .gal .inner{
+		                 width: 10000px;
+		                 font-size: 0;
+	                    }
+	     .gal .inner img{
+		                  width: 600px;
+		                  height: 400px;
+	                    }
+	         .gal button{
+		                 background-color: lightgrey;
+		                 top: 50%;
+		                 margin-top: -10px;
+		                 outline: none;
+		                 position: absolute;
+	                    }
+	   .gal button:hover{
+                         background-color: lightyellow;
+                         box-shadow: -10px 9px 71px 12px rgba(0,0,0,0.9);
+	                    }
+	    .gal button.prev{
+		                 left: 10px;
+	                    }
+	    .gal button.next{
+		                 right: 10px;
+	                    }
+	          .gal .dots{
+		                position: absolute;
+		                bottom: 0;
+		                left: 0;
+		                width: 100%;
+		                text-align: center;
+	                   }
+	       .gal .dots i{
+		                display: inline-block;
+		                height: 15px;
+		                width: 20px;
+		                background-color: lightyellow;
+		                opacity: 0.3;
+		                border-radius: 35%;
+		                margin: 0 5px;
+	                   }
+	.gal .dots i.active{
+		                background-color: darkgreen;
+		                opacity: 0.7;
+	                   }
+	    </style>
+</head>
+<body>
+
+	<div class="gal">
+		<div class="inner">
+			<img src="image/1.png" alt="">
+			<img src="image/2.png" alt="">
+			<img src="image/3.png" alt="">
+			<img src="image/4.png" alt="">
+		</div>
+		<button class="prev"><</button>
+		<button class="next">></button>
+		<div class="dots">
+		</div>
+	</div>
+
+	<script src="jquery-1.11.3.min.js"> </script>
+
+	<script>
+	$(function () {
+		var imgCount = $('.gal img').length;
+		for (var i = 0; i < imgCount; i++) {
+			$('.gal .dots').append('<i data-num="'+i+'"></i>');
+			$( $('.gal img')[i] ).attr('data-num', i);
+		};
+		$('.gal .dots i:first').addClass('active');
+		$('.next').click(function(){
+			forward();
+		})
+		$('.prev').click(function(){
+			$('.gal .inner img:last').prependTo('.gal .inner');
+			$('.gal .inner').css({'margin-left': -600});
+			$('.gal .inner').animate({'margin-left': 0}, 2000, endAnimation);
+		});
+
+		$('.gal .dots i').click(function(){
+			var num = $(this).data('num');
+			forward(check);
+
+			function check(){
+				var currentFirstImg = $('.gal .inner img:first').data('num');
+				if(num !== currentFirstImg){
+					forward(check);
+				}
+			}
+		});
+
+		function forward(cb){
+			$('.gal .inner').animate({'margin-left': -600}, 2000, function(){
+				$('.gal .inner img:first').appendTo('.gal .inner');
+				$('.gal .inner').css({'margin-left': 0});
+
+				endAnimation();
+				if(cb){
+					cb();
+				}
+			});
+		}
+
+		function endAnimation(){
+			$('.gal .dots i').removeClass('active');
+			var num = $('.gal img:first').data('num');
+			$('i[data-num="'+num+'"]').addClass('active');
+		}
+	});
+	</script>
+</body>
+</html>
