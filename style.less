@@ -1,13 +1,81 @@
 @background_color: #999999;
+@font_family: Coronetscript, cursive;
+@white_color: white;
+@gray_color: gray;
 
 body{
 	margin: 0 auto;
+	font-family: @font_family;
+}
+header{
+	background: url("img/background.png");
+	margin-bottom: 30px;
+	.container{
+		text-align: center;
+		img{
+		padding: 50px 20px 0;
+		display: inline-block;
+		}
+		.fadeInDown{
+			animation-duration: 1s;
+			animation-delay: 1s;
+		}
+		h1{
+			color: silver;
+			font-size: 1.5em;
+			span{
+				color: @white_color;
+				font-size: 2em;
+			}
+		}
+	}
 }
 
-header{
-	background-image: url("background.png");
-	.container{
-background-color: gray;
+main{
+	.main-row{
+		padding-bottom: 30px;
+		.project{ 
+			img{
+				width: 100%;
+				opacity: 0.6;
+				box-shadow: 2px 2px 24px 7px rgba(2,0,26,1);
+				&:hover{
+					box-shadow: 2px 2px 199px 183px rgba(1,0,5,1);
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+	.animated{
+		animation-duration: 0.6s;
+		animation-delay: 0s;
+	}
+}
 
- 	}
+footer{
+	border-bottom: 10px double @gray_color;
+	box-shadow: inset -8px -24px 169px 49px rgba(32,32,41,1);
+	padding-bottom: 20px;
+	h1{
+		color: black;
+		padding-bottom: 30px;
+		text-shadow: -1px 1px 16px rgba(255, 255, 255, 1);
+	}
+	.title{
+		font-size: 0.8em;
+		font-weight: bold;
+		color: lighten(@gray_color, 15%);
+		padding-bottom: 10px;
+		.fa{
+			padding-right: 10px;
+			color: lighten(@gray_color, 10%);
+			float: left;
+		}
+		.phones{
+			float: left;
+		}
+		span, a{
+			color: @white_color;
+		}
+	}
 }
