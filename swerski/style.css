@@ -1,0 +1,437 @@
+.products_style {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+}
+.style_text {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-size: 1.5em;
+}
+.button_style {
+  box-shadow: 2.5px 4.3px 5px rgba(0, 0, 0, 0.75);
+  color: #252a2e;
+  font-family: NewsGothicBT;
+}
+.container {
+  max-width: 1024px;
+}
+header {
+  margin-top: 24px;
+}
+header .email {
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+header .email a {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-size: 1.5em;
+  line-height: 80px;
+  font-weight: 400;
+}
+header .email a i {
+  padding-right: 11px;
+  color: #428bca;
+}
+.navbar {
+  margin-top: 13px;
+  margin-bottom: 0;
+}
+.navbar ul {
+  padding: 0;
+  text-align: center;
+}
+.navbar ul li {
+  display: inline-block;
+  padding: 15px;
+  padding-bottom: 0;
+}
+.navbar ul li a {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-size: 1.5em;
+  text-decoration: none!important;
+}
+.navbar ul li a:hover {
+  color: #428bca;
+}
+.top_background {
+  background: url('img/top_background.png') no-repeat 50% 50%;
+  text-align: center;
+  padding-bottom: 96px;
+}
+.top_background span {
+  display: inline-block;
+  color: white;
+  font-size: 1.875em;
+  font-weight: 400;
+  font-family: OpenSans;
+  padding: 79px 0 30px 0;
+}
+.top_background span b {
+  font-family: CooperBlack;
+}
+.top_background button {
+  box-shadow: 2.5px 4.3px 5px rgba(0, 0, 0, 0.75);
+  color: #252a2e;
+  font-family: NewsGothicBT;
+  font-size: 3em;
+  font-weight: 700;
+  padding: 0 35px;
+}
+.the_facts {
+  margin-top: 59px;
+  text-align: center;
+}
+.the_facts .title {
+  color: #252a2e;
+  font-family: NewsGothicBT;
+  font-size: 4.5em;
+  font-weight: 700;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.the_facts .image {
+  margin-bottom: 25px;
+  position: relative;
+}
+.the_facts .image img {
+  display: inline-block;
+}
+.the_facts .image span {
+  color: #1d254d;
+  font-family: OpenSans;
+  font-size: 3.125em;
+  font-weight: 400;
+  margin-top: 0;
+  display: inline-block;
+  top: 32%;
+  left: 42%;
+  position: absolute;
+}
+.the_facts .image .first_center_block {
+  left: 35%;
+}
+.the_facts .image .second_center_block {
+  left: 30%;
+}
+.the_facts .description {
+  font-family: OpenSans;
+  color: #252a2e;
+  font-size: 1em;
+  font-weight: 400;
+}
+main .product {
+  padding: 0;
+}
+.top_group {
+  color: #252a2e;
+  font-family: NewsGothicBT;
+  font-weight: 700;
+  background-color: #b1dcf1;
+  text-align: center;
+  padding: 20px 0 50px 0;
+}
+.top_group .title {
+  font-size: 4.5em;
+}
+.top_group .title p {
+  font-size: 1.875em;
+}
+.deal_alerts {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+  margin-top: 62px;
+}
+.deal_alerts span {
+  font-size: 3em;
+}
+.deal_alerts p {
+  font-size: 1.5em;
+  padding-right: 102px;
+}
+.deal_alerts .first_image_block {
+  position: relative;
+  text-align: right;
+}
+.deal_alerts .first_image_block .first_main_img {
+  display: inline-block;
+}
+.deal_alerts .first_image_block .loupe {
+  position: absolute;
+  bottom: 0;
+  right: 18px;
+}
+.stock_alerts {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+  text-align: right;
+}
+.stock_alerts span {
+  font-size: 3em;
+}
+.stock_alerts p {
+  font-size: 1.5em;
+  padding-left: 130px;
+}
+.stock_alerts .second_image_block {
+  position: relative;
+  text-align: right;
+}
+.stock_alerts .second_image_block .second_main_img {
+  display: inline-block;
+}
+.stock_alerts .second_image_block .loupe {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+.smart_widgets {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+}
+.smart_widgets span {
+  font-size: 3em;
+}
+.smart_widgets p {
+  font-size: 1.5em;
+  padding-right: 106px;
+}
+.smart_widgets .third_image_block {
+  position: relative;
+  text-align: right;
+}
+.smart_widgets .third_image_block .third_main_img {
+  display: inline-block;
+}
+.smart_widgets .third_image_block .loupe {
+  position: absolute;
+  bottom: 11px;
+  right: 30px;
+}
+.smart_overlays {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+  text-align: right;
+}
+.smart_overlays span {
+  font-size: 3em;
+}
+.smart_overlays p {
+  font-size: 1.5em;
+  padding-left: 130px;
+}
+.smart_overlays .fourth_image_block {
+  position: relative;
+  text-align: right;
+}
+.smart_overlays .fourth_image_block .fourth_main_img {
+  display: inline-block;
+}
+.smart_overlays .fourth_image_block .loupe {
+  position: absolute;
+  bottom: 10px;
+  right: 57px;
+}
+.precise_targeting {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+}
+.precise_targeting span {
+  font-size: 3em;
+}
+.precise_targeting p {
+  font-size: 1.5em;
+  padding-right: 102px;
+}
+.precise_targeting .fifth_image_block {
+  position: relative;
+  text-align: right;
+}
+.precise_targeting .fifth_image_block .fifth_main_img {
+  display: inline-block;
+}
+.precise_targeting .fifth_image_block .loupe {
+  position: absolute;
+  bottom: 10px;
+  right: 56px;
+}
+.key_services {
+  color: #1d254d;
+  font-family: NewsGothicBT;
+  margin-top: 40px;
+  background-color: #b1dcf1;
+}
+.key_services .title {
+  font-size: 4.5em;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.key_services .shadow {
+  margin: -29px;
+}
+.key_services .service {
+  font-weight: 700;
+  padding: 0 73px 0 73px;
+}
+.key_services .service .icon {
+  padding-bottom: 18px;
+}
+.key_services .service a {
+  color: #1d254d;
+  white-space: nowrap;
+  font-size: 1.125em;
+}
+.key_services .service p {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-size: 0.875em;
+  font-weight: 400;
+  display: inline-block;
+}
+.second_row {
+  margin-top: 0;
+  padding: 64px 0 108px 0;
+}
+.payment {
+  background: url('img/background_bottom.png') no-repeat 50% 50%;
+  padding: 195px 0 150px 0;
+}
+.payment .white_block {
+  padding: 0 0 60px 0;
+  margin-bottom: 10px;
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+  background: url('img/white.png') no-repeat;
+}
+.payment .white_block h2 {
+  color: #1d254d;
+  font-family: NewsGothicBT;
+  font-size: 1.937em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-left: 82px;
+  padding-bottom: 5px;
+}
+.payment .white_block div {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 0 70px 25px 19px;
+}
+.payment .white_block span {
+  font-size: 1.125em;
+  display: block;
+  padding: 0 70px 20px 19px;
+}
+.payment .second_block h2 {
+  padding-left: 43px;
+}
+.clients {
+  text-align: center;
+}
+.clients h2 {
+  color: #252a2e;
+  font-family: NewsGothicBT;
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.clients img {
+  display: inline-block;
+  margin: 30px 0 50px 0;
+}
+form {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: repeating-linear-gradient(-40deg, #222222, #222222 10px, #333333 10px, #333333 20px);
+  padding-bottom: 98px;
+  text-align: center;
+}
+form h2 {
+  font-family: NewsGothicBT;
+  font-size: 3em;
+  color: white;
+  font-weight: 700;
+  margin-top: 39px;
+}
+form h3 {
+  font-family: OpenSans;
+  font-size: 2.25em;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 37px;
+}
+form .form {
+  background-color: #b1dcf1;
+  padding: 36px 0 50px 0;
+}
+form .form .form-group {
+  position: relative;
+}
+form .form .form-group input {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+  max-width: 70%;
+  font-size: 1.5em;
+  outline: none;
+  padding: 5px 5px 5px 50px;
+}
+form .form .form-group .name {
+  padding-bottom: 1px;
+}
+form .form .form-group .email {
+  padding-bottom: 2px;
+}
+form .form .form-group img {
+  position: absolute;
+  display: inline-block;
+  background-color: #2b3236;
+  padding: 5px;
+}
+form .form button {
+  box-shadow: 2.5px 4.3px 5px rgba(0, 0, 0, 0.75);
+  color: #252a2e;
+  font-family: NewsGothicBT;
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-top: 27px;
+  padding: 0 9%;
+}
+footer img {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+footer .container {
+  padding: 0;
+}
+footer .container .footer_info {
+  padding: 15px 0 15px 30px;
+  background: repeating-linear-gradient(-40deg, #222222, #222222 10px, #333333 10px, #333333 20px);
+}
+footer .container .footer_info .logo {
+  max-width: 370px;
+  padding-top: 16px;
+}
+footer .container .footer_info .email {
+  text-align: right;
+  line-height: 100px;
+}
+footer .container .footer_info .email a {
+  color: #6a6b6b;
+  font-family: OpenSans;
+  font-weight: 400;
+  color: white;
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
